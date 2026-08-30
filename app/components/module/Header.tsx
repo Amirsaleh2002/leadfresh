@@ -44,7 +44,12 @@ export default function Header() {
         {/* Brand Logo (Center on mobile, Left on desktop) */}
         <div className="flex items-center">
           <div className="relative w-[224px] h-[77px]">
-            <Image src={"/Logo.png"} fill className="w-full h-full" />
+            <Image
+              alt="logo"
+              src={"/Logo.png"}
+              fill
+              className="w-full h-full"
+            />
           </div>
         </div>
 

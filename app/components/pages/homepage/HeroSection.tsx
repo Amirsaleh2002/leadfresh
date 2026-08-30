@@ -25,7 +25,7 @@ export default function HeroSection() {
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#56DDB8] bg-transparent backdrop-blur-md">
               <div className="relative w-7 h-7">
-                <Image src={"/stars.png"} fill className="w-full h-full" />
+                <Image src={"/stars.png"} fill className="w-full h-full" alt="star" />
               </div>
               <span
                 className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase bg-clip-text text-transparent"
@@ -130,7 +130,7 @@ export default function HeroSection() {
 
           {/* Right Dashboard Mockup (Stacked Below on Mobile) */}
           <div className="lg:col-span-7 relative w-full [perspective:1000px] md:h-[692px] h-75 rounded-2xl p-3.5 sm:p-5 sm:[transform:rotateY(-7deg)_rotateX(0deg)] hover:[transform:none] transition-all duration-700 mt-4 lg:mt-0">
-            <Image src={"/Hero.png"} fill className="w-full h-full" />
+            <Image src={"/Hero.png"} fill className="w-full h-full" alt="star" />
           </div>
         </div>
 
