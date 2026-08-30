@@ -130,7 +130,7 @@ export default function HeroSection() {
 
           {/* Right Dashboard Mockup (Stacked Below on Mobile) */}
           <div className="lg:col-span-7 relative w-full [perspective:1000px] md:h-[692px] h-75 rounded-2xl p-3.5 sm:p-5 sm:[transform:rotateY(-7deg)_rotateX(0deg)] hover:[transform:none] transition-all duration-700 mt-4 lg:mt-0">
-            <Image src={"/Hero.png"} fill className="w-full h-full" alt="star" />
+            <Image src={"/hero.png"} fill className="w-full h-full" alt="star" />
           </div>
         </div>
 
