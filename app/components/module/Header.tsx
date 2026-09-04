@@ -30,7 +30,7 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-[#000111]">
+    <header className="w-full backdrop-blur-xl bg-[#000111]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 h-18 sm:h-20 flex items-center justify-between">
         {/* Mobile: Hamburger Button (Left) */}
         <button
@@ -43,7 +43,7 @@ export default function Header() {
 
         {/* Brand Logo (Center on mobile, Left on desktop) */}
         <div className="flex items-center">
-          <div className="relative w-[224px] h-[77px]">
+          <div className="relative lg:w-[224px] w-[154px] lg:h-[77px] h-[61px]">
             <Image
               alt="logo"
               src={"/Logo.png"}
@@ -77,18 +77,12 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Full-Screen Mobile Drawer (Sliding from Left) */}
       <div
-        className={`fixed inset-0 z-50 bg-[#060b13] flex flex-col justify-between p-6 transition-transform duration-300 ease-in-out lg:hidden ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed inset-0 z-50 flex flex-col relative justify-between p-6 transition-transform duration-300 ease-in-out lg:hidden ${
+          isOpen ? "translate-x-0 bg-[#060b13] left-0 h-Screen top-0 bottom-0 right-0" : "-translate-x-full h-0 -left-[1000px]"
         }`}
       >
-        {/* Drawer Header */}
         <div className="flex items-center justify-between border-b border-slate-800/80 pb-5">
-          {/* <Logo /> */}
-          {/* <div className="relative w-[224px] h-[77px]">
-            <Image src={"/Logo.png"} fill className="w-full h-full" />
-          </div> */}
           <button
             onClick={() => setIsOpen(false)}
             className="p-2 text-slate-400 hover:text-white rounded-full hover:bg-slate-800/60 transition focus:outline-none"
@@ -98,7 +92,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Drawer Nav Links */}
         <div className="flex flex-col gap-5 py-8">
           {navItems.map((item) => (
             <Link
@@ -112,7 +105,6 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Drawer Footer CTA Buttons */}
         <div className="flex flex-col gap-3 pt-6 border-t border-slate-800/80">
           <button
             onClick={() => setIsOpen(false)}
